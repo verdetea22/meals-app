@@ -3,14 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:meals_app/models/category.dart';
 
 class CatergoryGridItem extends StatelessWidget {
-  const CatergoryGridItem({super.key, required this.category});
+  const CatergoryGridItem({
+    super.key, 
+    required this.category,
+    required this.onSelectCategory,
+    });
 
   final Category category;
-
+  final void Function() onSelectCategory;
   @override
   Widget build(BuildContext context) {
     return InkWell( //like gesturedetector, but you get feedback
-      onTap: (){},
+      onTap: onSelectCategory,
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(16),
       child: Container(
