@@ -17,7 +17,7 @@ final theme = ThemeData(
 
 void main() {
   runApp(
-    const ProviderScope( //all widgets cna access riverpod
+    const ProviderScope( //all widgets can access riverpod
       child: App(),
     ),
   );
